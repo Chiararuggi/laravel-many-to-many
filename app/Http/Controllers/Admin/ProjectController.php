@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 
 
 use App\Models\Project;
+use App\Models\Technology;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -35,6 +37,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
+        $technology = Technology::all();
 
         return view("admin.projects.index", compact("projects"));
     }

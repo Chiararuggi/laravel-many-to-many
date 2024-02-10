@@ -43,6 +43,7 @@
                     <input type="text" class="form-control" id="topic" name="topic">
                 </div>
 
+
                 <button type="submit" class="btn btn-primary">Inserisci</button>
             </form>
             <a href="{{ route('admin.projects.index') }}" class="btn btn-warning">Torna alla sezione Progetti</a>

@@ -13,6 +13,17 @@
                         </a>
                     </div>
                     <div class="card-body">{{ $project->topic }}</div>
+                    <div class="card-body">
+                        @if (count($project->technology) > 0)
+                                    <ul>
+                                        @foreach ($project->technology as $technology)
+                                            <li>{{ $technology->name }}</li>
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <span>No tag</span>
+                                @endif
+                    </div>
                     <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-primary">Show details</a>
                     <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-info">Edit</a>
 
